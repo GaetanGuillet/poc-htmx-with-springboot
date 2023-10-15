@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Todos List</title>
+    <script src="https://unpkg.com/htmx.org@1.9.6"
+            integrity="sha384-FhXw7b6AlE/jyjlZH5iHa/tTe9EpJ1Y55RjcgPbjeWMskSxZt1v9qkxLJWNJaGni"
+            crossorigin="anonymous"></script>
+<body>
+<div>
+    <input type="text" name="add-todo" id="add-todo">
+    <button hx-post="/todos" hx-include="#add-todo" hx-target=".todos-list">Add !</button>
+</div>
+<table th:fragment="todos-list" class="todos-list">
+    <tr th:each="todo: ${todos}" class="todo">
+        <td th:text="${todo.id}"/>
+        <td th:text="${todo.title}"/>
+        <td>
+            <button th:attr="hx-delete=@{/todos/{id}(id=${todo.id})}" hx-target="closest .todo">Remove me !</button>
+        </td>
+    </tr>
+</table>
+<button hx-post="/todos/reset" hx-target=".todos-list">Reset !</button>
+</body>
+</html>

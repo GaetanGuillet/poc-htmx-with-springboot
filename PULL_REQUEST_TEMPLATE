@@ -39,4 +39,4 @@ Toggle the feature flippers, set up the AWS integration, then run the applicatio
 * [ ] Text has been translated
 * [ ] CI is passing (or you've indicated "WIP" status for early reviews)
 * [ ] Branch up to date with master
-
+* [ ] Test

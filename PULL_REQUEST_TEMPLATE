@@ -1,0 +1,42 @@
+## Description
+
+This branch adds code that allows users to upload and delete floobars.
+
+## Status
+
+This code is a work in progress. It is not ready for a review.
+
+## Related Jira tickets
+
+The following Jira tickets will be completed by these changes:
+
+
+## Screenshots
+
+![Uploading a floobar](https://example.com/image.png)
+
+## Manual testing instructions
+
+Toggle the feature flippers, set up the AWS integration, then run the application as normal.
+
+### Uploading a floobar
+
+1. Navigate to 'Dashboard', then 'Floobars'
+2. Click 'Upload new floobar' and select a floobar file
+3. Click 'Upload' to complete the upload
+
+### Deleting a floobar
+
+1. Upload a floobar using above instructions
+2. Click on 'Delete floobar' next to the listing for the floobar you uploaded.
+
+## Self-review checklist
+* [ ] No superfluous changes in diff
+* [ ] Tests written and passing locally
+* [ ] Table indexes added as required
+* [ ] Front-end matching given design/wireframes
+* [ ] Feature flippers are used if appropriate
+* [ ] Text has been translated
+* [ ] CI is passing (or you've indicated "WIP" status for early reviews)
+* [ ] Branch up to date with master
+
